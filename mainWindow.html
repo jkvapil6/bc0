@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>MT Client</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <h1>MT Client</h1>
+    <section class="connProps">
+      <label>ReqPort</label><br />
+      <input type="text" name="" id="inReqPort" /><br />
+      <label>PullPort</label><br />
+      <input type="text" name="" id="inPullPort" /><br />
+    </section>
+
+    <button id="btnConnect">Connect</button>
+    <button id="btnDisconnect">Disconnect</button>
+    <button id="btnBuy">Open order</button>
+    <button id="btnClose">Close order</button>
+    <br />
+
+    <select id="selectSymbol">
+      <option value="EURUSD" selected="selected">EURUSD</option>
+      <option value="GBPUSD">GBPUSD</option>
+      <option value="AUDUSD">AUDUSD</option>
+      <option value="USDJPY">USDJPY</option>
+    </select>
+
+    <data id="result"></data>
+
+    <canvas id="myChart" width="400" height="400"></canvas>
+
+    <section>
+      <header>
+        <h2>Opened Trades</h2>
+      </header>
+      <table id="tabOpenedTrades" style="width:100%">
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <script src="./init.js"></script>
+  </body>
+</html>

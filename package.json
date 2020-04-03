@@ -1,0 +1,29 @@
+{
+  "name": "mtclient",
+  "version": "1.0.0",
+  "description": "Client application connects to MetaTrader",
+  "main": "main.js",
+  "scripts": {
+    "doc": "jsdoc -c jsdoc.json",
+    "start": "electron .",
+    "rebuild": "electron-rebuild -f -w sqlite3",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds",
+    "package-win": "electron-packager . mtClient --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Electron Tutorial App\"",
+    "package-linux": "electron-packager . mtClient --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/icons/png/1024x1024.png --prune=true --out=release-builds"
+  },
+  "author": "Jan Kvapil",
+  "license": "MIT",
+  "dependencies": {
+    "chart.js": "^2.9.3",
+    "electron": "^6.0.12",
+    "knex": "^0.20.2",
+    "sqlite3": "^4.1.0",
+    "zeromq": "^4.6.0"
+  },
+  "devDependencies": {
+    "electron-packager": "^14.1.0",
+    "electron-rebuild": "^1.8.6",
+    "file-loader": "^4.2.0",
+    "jsdoc": "^3.6.3"
+  }
+}
